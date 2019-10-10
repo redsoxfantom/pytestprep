@@ -1,3 +1,4 @@
 *.docx
 venv/
 .vscode/
+__pycache__/
