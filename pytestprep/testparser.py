@@ -18,7 +18,7 @@ def parse_test_bank(file):
     answer_regex = r"Answer: (.)"
     in_explanation = False
     explanation_text = ""
-    option_regex = r"^[A-Z].$"
+    option_regex = r"^([A-Z]).$"
     options = {}
     current_option = ""
     answer = ""
@@ -46,7 +46,7 @@ def parse_test_bank(file):
             in_question = False
             in_explanation = False
             in_option = True
-            current_option = text
+            current_option = option_match.group(1)
             options[current_option] = ""
         if question_match:
             in_question = True
