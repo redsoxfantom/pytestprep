@@ -21,9 +21,7 @@ class TimedTest:
         self.curr_question = 0
         self.num_questions = num_questions
         for i in range(0,num_questions):
-            question = None
-            while question not in self.questions:
-                question = random.choice(questions)
+            question = random.choice(questions)
             self.questions.append(question)
 
     def has_more_questions(self):
